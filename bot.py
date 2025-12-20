@@ -16,7 +16,7 @@ logging.basicConfig(level=logging.INFO)
 app = Flask(__name__)
 
 # ================= CONFIG =================
-TOKEN = os.getenv("TOKEN", "8521894848:AAH1x07Cfojnw1korW0FZi6MBxdpqzhqRNI")  # ← Replit Secrets mein TOKEN daal do, ya yaha hardcode (naya token daalna mat bhoolna)
+TOKEN = os.getenv("TOKEN")  # ← Replit Secrets mein TOKEN daal do, ya yaha hardcode (naya token daalna mat bhoolna)
 STORAGE_CHANNEL_ID = -1003589161556
 ADMIN1_USERNAME = "idlikh"
 ADMIN2_USERNAME = "dr_rawat93"
@@ -299,4 +299,5 @@ def index():
 # ================= RUN =================
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8080))
+
     app.run(host="0.0.0.0", port=port)
